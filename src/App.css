@@ -1,38 +1,136 @@
-.App {
-  text-align: center;
+/* 設置整體的字型和背景顏色 */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #E9E3E6;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* 主要容器 */
+.container {
+  max-width: 500px;
+  margin: auto;
+  background-color: #dbd3d8;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* 標題 */
+h1 {
+  color: #333;
+  font-size: 40px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* 描述文字 */
+.description {
+  color: #555;
+  font-size: 20px;
+}
+
+/* 輸入框樣式 */
+.input-field {
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.input-field:focus {
+  border-color: #827081;
+  outline: none;
+}
+
+/* 結果顯示樣式 */
+.result {
+  margin-top: 20px;
+}
+
+/* 按鈕容器 */
+.button-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 10px; /* 增加按鈕之間的距離 */
+}
+
+/* 按鈕基礎樣式 */
+button {
+  padding: 10px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  border: none;
   color: white;
+  transition: background-color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+/* 選擇按鈕 */
+.select-button {
+  background-color: #9A8F97;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.select-button:hover {
+  background-color: #5d565b;
+}
+
+/* 清除按鈕 */
+.clear-button {
+  background-color: #9A8F97;
+}
+
+.clear-button:hover {
+  background-color: #5d565b;
+}
+
+/* 清除歷史紀錄按鈕 */
+.delete-history-button {
+  background-color: #9A8F97;
+}
+
+.delete-history-button:hover {
+  background-color: #5d565b;
+}
+
+/* 歷史紀錄樣式 */
+h3 {
+  color: #333;
+}
+
+.history-list ul,
+.choice-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #f0f0f0;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 刪除按鈕樣式 */
+li .delete-button {
+  background-color: #736F72;
+  padding: 5px 10px;
+}
+
+li .delete-button:hover {
+  background-color: #080708;
+}
+
+/* 歷史紀錄點擊項目樣式 */
+.history-item {
+  cursor: pointer;
+  color: #1E90FF;
+  text-decoration: underline;
+}
+
+.history-item:hover {
+  color: #4682B4;
 }
